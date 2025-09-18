@@ -32,6 +32,8 @@ const products = [{
 
 // The way this function forEach work, is that it takes each product, saves it in the parameter product and then runs the function.
 let productsHTML = ''
+
+// The above productsHTML allows us to put the HTML together
 products.forEach((product) => {
 
     productsHTML += `
