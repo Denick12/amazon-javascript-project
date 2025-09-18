@@ -18,11 +18,11 @@ const products = [{
     },
     priceCents: 2095
 }, {
-    image: 'adults-plain-cotton-tshirt-2-pack-teal.jpg',
+    image: 'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
     name: 'Adults Plain Cotton T-Shirt - 2 Pack',
     rating: {
-        star: '4.5',
-        count: '56'
+        stars: 4.5,
+        count: 56
     },
     priceCents: 799
 }];
@@ -44,12 +44,12 @@ products.forEach((product) => {
           </div>
 
           <div class="product-name limit-text-to-2-lines">
-            ${product.image}
+            ${product.name}
           </div>
 
           <div class="product-rating-container">
             <img class="product-rating-stars"
-              src="images/ratings/rating-${product.rating.star * 10}.png">
+              src="images/ratings/rating-${product.rating.stars * 10}.png">
             <div class="product-rating-count link-primary">
               ${product.rating.count}
             </div>
@@ -88,3 +88,4 @@ products.forEach((product) => {
 
     });
 console.log(productsHTML)
+document.querySelector('.js-products-grid').innerHTML =productsHTML
