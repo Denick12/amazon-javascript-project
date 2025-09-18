@@ -1,39 +1,41 @@
 //creating objects with their properties, helps us save the data----data structure---helps us structure our data
 // Note while using js: 1. we save data, 2. generate the HTML, 3. Make it interactive
 // Below we save the data
-const products = [{
-    image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
-    name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
-    rating: {
-        stars: 4.5,
-        count: 87
-    },
-    priceCents: 1090
-}, {
-    image: 'images/products/intermediate-composite-basketball.jpg',
-    name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
-    rating: {
-        stars: 4,
-        count: 127
-    },
-    priceCents: 2095
-}, {
-    image: 'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
-    name: 'Adults Plain Cotton T-Shirt - 2 Pack',
-    rating: {
-        stars: 4.5,
-        count: 56
-    },
-    priceCents: 799
-},{
-    image:'images/products/black-2-slot-toaster.jpg',
-    name:'2 Slot Toaster-Black',
-    rating:{
-        stars: 5,
-        count: 2197
-    },
-    priceCents: 1899
-}];
+// const products = [{
+//     image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
+//     name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
+//     rating: {
+//         stars: 4.5,
+//         count: 87
+//     },
+//     priceCents: 1090
+// }, {
+//     image: 'images/products/intermediate-composite-basketball.jpg',
+//     name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
+//     rating: {
+//         stars: 4,
+//         count: 127
+//     },
+//     priceCents: 2095
+// }, {
+//     image: 'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
+//     name: 'Adults Plain Cotton T-Shirt - 2 Pack',
+//     rating: {
+//         stars: 4.5,
+//         count: 56
+//     },
+//     priceCents: 799
+// },{
+//     image:'images/products/black-2-slot-toaster.jpg',
+//     name:'2 Slot Toaster-Black',
+//     rating:{
+//         stars: 5,
+//         count: 2197
+//     },
+//     priceCents: 1899
+// }];
+
+// We removed the js we had created and used the product.js data.
 
 //Next we generate the HTML using js as below
 //Here we will loop through the above array of products created
