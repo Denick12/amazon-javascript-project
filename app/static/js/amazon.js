@@ -1,4 +1,6 @@
-//
+//creating objects with their properties, helps us save the data----data structure---helps us structure our data
+// Note while using js: 1. we save data, 2. generate the HTML, 3. Make it interactive
+// Below we save the data
 const products = [{
     image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
     name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
@@ -24,3 +26,60 @@ const products = [{
     },
     priceCents: 799
 }];
+
+//Next we generate the HTML using js as below
+//Here we will loop through the above array of products created
+
+// The way this function forEach work, is that it takes each product, saves it in the parameter product and then runs the function.
+products.forEach((products) => {
+    const html = `<div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/athletic-cotton-socks-6-pairs.jpg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Black and Gray Athletic Cotton Socks - 6 Pairs
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              87
+            </div>
+          </div>
+
+          <div class="product-price">
+            $10.90
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>`;
+
+    console.log(html)
+});
