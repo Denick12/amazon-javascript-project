@@ -17,12 +17,12 @@ const products = [{
         count: 127
     },
     priceCents: 2095
-},{
-    image:'adults-plain-cotton-tshirt-2-pack-teal.jpg',
-    name:'Adults Plain Cotton T-Shirt - 2 Pack',
-    rating:{
-        star:'4.5',
-        count:'56'
+}, {
+    image: 'adults-plain-cotton-tshirt-2-pack-teal.jpg',
+    name: 'Adults Plain Cotton T-Shirt - 2 Pack',
+    rating: {
+        star: '4.5',
+        count: '56'
     },
     priceCents: 799
 }];
@@ -31,8 +31,11 @@ const products = [{
 //Here we will loop through the above array of products created
 
 // The way this function forEach work, is that it takes each product, saves it in the parameter product and then runs the function.
+let productsHTML = ''
 products.forEach((product) => {
-    const html = `<div class="product-container">
+
+    productsHTML += `
+        <div class="product-container">
           <div class="product-image-container">
             <img class="product-image"
               src="${product.image}">
