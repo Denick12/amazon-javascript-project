@@ -96,17 +96,27 @@ products.forEach((product) => {
           </button>
         </div>`;
 
-    });
+});
 // console.log(productsHTML)
-document.querySelector('.js-products-grid').innerHTML =productsHTML;
+document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 // add to cart button
 document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
-    button.addEventListener('click', () => {
-        console.log('Added product')
+        button.addEventListener('click', () => {
+            // console.log('Added product')
+            //     Now that from the above we have confirmed that pur add to cart button works, we need to now figure out how the products will be actually added to our cart list
+            //     We may use;
+//         cart.push({
+//           productName: 'Basketball',
+//           quantity: 1
+//});
+
+        //     How do we know which product to add to the cart?
+        //
+        })
     })
-})
+
 
 
 
