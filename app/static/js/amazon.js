@@ -97,10 +97,11 @@ products.forEach((product) => {
         </div>`;
 
     });
-console.log(productsHTML)
+// console.log(productsHTML)
 document.querySelector('.js-products-grid').innerHTML =productsHTML;
 
-document.querySelector('.js-add-to-cart')
+// add to cart button
+document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
     button.addEventListener('click', () => {
         console.log('Added product')
