@@ -91,7 +91,8 @@ products.forEach((product) => {
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary js-add-to-cart">
+          <button class="add-to-cart-button button-primary js-add-to-cart"
+          data-product-name="${product.name}">
             Add to Cart
           </button>
         </div>`;
@@ -113,7 +114,22 @@ document.querySelectorAll('.js-add-to-cart')
 //});
 
         //     How do we know which product to add to the cart?
-        //
+        //We use data attribute, it allows us to attach any information to an element
+        //     e.g : data-product-name
+       const productName = button.dataset.productName;
+
+       let matching
+       // loop through the cart list using .forEach()
+       cart.forEach((item) => {
+           if (productName ===item.productName){
+
+           }
+       })
+        cart.push({
+            productName:productName,
+            quantity:1
+        });
+        console.log(cart)
         })
     })
 
