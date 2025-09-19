@@ -113,23 +113,28 @@ document.querySelectorAll('.js-add-to-cart')
 //           quantity: 1
 //});
 
-        //     How do we know which product to add to the cart?
-        //We use data attribute, it allows us to attach any information to an element
-        //     e.g : data-product-name
-       const productName = button.dataset.productName;
+            //     How do we know which product to add to the cart?
+            //We use data attribute, it allows us to attach any information to an element
+            //     e.g : data-product-name
+            const productName = button.dataset.productName;
 
-       let matching
-       // loop through the cart list using .forEach()
-       cart.forEach((item) => {
-           if (productName ===item.productName){
+            let matchingItem;
+            // loop through the cart list using .forEach()
+            cart.forEach((item) => {
+                if (productName === item.productName) {
+                    matchingItem = item;
+                }
+            });
+            if (matchingItem) {
+                matchingItem.quantity++;
+            } else {
+                cart.push({
+                    productName: productName,
+                    quantity: 1
+                });
+            }
 
-           }
-       })
-        cart.push({
-            productName:productName,
-            quantity:1
-        });
-        console.log(cart)
+            console.log(cart)
         })
     })
 
