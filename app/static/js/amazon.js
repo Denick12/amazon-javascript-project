@@ -116,12 +116,12 @@ document.querySelectorAll('.js-add-to-cart')
             //     How do we know which product to add to the cart?
             //We use data attribute, it allows us to attach any information to an element
             //     e.g : data-product-name
-            const productName = button.dataset.productName;
+            const productId = button.dataset.productId;
 
             let matchingItem;
             // loop through the cart list using .forEach()
             cart.forEach((item) => {
-                if (productName === item.productName) {
+                if (productId === item.productId) {
                     matchingItem = item;
                 }
             });
@@ -129,7 +129,7 @@ document.querySelectorAll('.js-add-to-cart')
                 matchingItem.quantity++;
             } else {
                 cart.push({
-                    productName: productName,
+                    productId: productId,
                     quantity: 1
                 });
             }
