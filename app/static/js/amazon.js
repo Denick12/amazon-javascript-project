@@ -137,7 +137,7 @@ document.querySelectorAll('.js-add-to-cart')
             cart.forEach((item) =>{
                 cartQuantity +=item.quantity;
             })
-            console.log(cartQuantity);
+            // console.log(cartQuantity);
             console.log(cart)
         })
     })
