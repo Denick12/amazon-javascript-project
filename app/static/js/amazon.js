@@ -107,25 +107,6 @@ products.forEach((product) => {
 // console.log(productsHTML)
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
-function addToCart(productId) {
-    let matchingItem;
-    // loop through the cart list using .forEach()
-    cart.forEach((cartItem) => {
-        if (productId === cartItem.productId) {
-            matchingItem = cartItem;
-        }
-    });
-    if (matchingItem) {
-        matchingItem.quantity++;
-    } else {
-        cart.push({
-            productId: productId,
-            quantity: 1
-        });
-    }
-}
-
-
 function updateCartQuantity() {
     let cartQuantity = 0;
     cart.forEach((cartItem) => {

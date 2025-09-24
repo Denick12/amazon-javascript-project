@@ -11,3 +11,21 @@
 // ]
 
 export const cart = [];
+
+function addToCart(productId) {
+    let matchingItem;
+    // loop through the cart list using .forEach()
+    cart.forEach((cartItem) => {
+        if (productId === cartItem.productId) {
+            matchingItem = cartItem;
+        }
+    });
+    if (matchingItem) {
+        matchingItem.quantity++;
+    } else {
+        cart.push({
+            productId: productId,
+            quantity: 1
+        });
+    }
+}
