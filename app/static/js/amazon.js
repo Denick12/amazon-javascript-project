@@ -41,7 +41,7 @@
 //Here we will loop through the above array of products created
 
 //importing the cart variable cart
-import {cart} from '../../../data/cart.js';
+import {cart,addToCart} from '../../../data/cart.js';
 
 // importing the product variable
 import {products} from "../../../data/products.js";
