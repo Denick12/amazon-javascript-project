@@ -110,9 +110,9 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML;
 function addToCart(productId) {
     let matchingItem;
     // loop through the cart list using .forEach()
-    cart.forEach((item) => {
-        if (productId === item.productId) {
-            matchingItem = item;
+    cart.forEach((cartItem) => {
+        if (productId === cartItem.productId) {
+            matchingItem = cartItem;
         }
     });
     if (matchingItem) {
@@ -128,8 +128,8 @@ function addToCart(productId) {
 
 function updateCartQuantity() {
     let cartQuantity = 0;
-    cart.forEach((item) => {
-        cartQuantity += item.quantity;
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
     });
     document.querySelector('.js-cart-quantity')
         .innerHTML = cartQuantity
