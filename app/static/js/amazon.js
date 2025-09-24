@@ -125,6 +125,16 @@ function addToCart(productId) {
     }
 }
 
+
+function updateCartQuantity() {
+    let cartQuantity = 0;
+    cart.forEach((item) => {
+        cartQuantity += item.quantity;
+    });
+    document.querySelector('.js-cart-quantity')
+        .innerHTML = cartQuantity
+}
+
 // add to cart button
 document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
@@ -142,16 +152,8 @@ document.querySelectorAll('.js-add-to-cart')
             //     e.g : data-product-name
             const productId = button.dataset.productId;
             addToCart(productId);
+            updateCartQuantity()
 
-
-            let cartQuantity = 0;
-            cart.forEach((item) => {
-                cartQuantity += item.quantity;
-            });
-            document.querySelector('.js-cart-quantity')
-                .innerHTML = cartQuantity
-
-            console.log(cartQuantity);
             console.log(cart)
         })
     })
