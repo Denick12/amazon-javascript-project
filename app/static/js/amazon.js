@@ -107,6 +107,24 @@ products.forEach((product) => {
 // console.log(productsHTML)
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
+function addToCart(productId) {
+    let matchingItem;
+    // loop through the cart list using .forEach()
+    cart.forEach((item) => {
+        if (productId === item.productId) {
+            matchingItem = item;
+        }
+    });
+    if (matchingItem) {
+        matchingItem.quantity++;
+    } else {
+        cart.push({
+            productId: productId,
+            quantity: 1
+        });
+    }
+}
+
 // add to cart button
 document.querySelectorAll('.js-add-to-cart')
     .forEach((button) => {
@@ -123,25 +141,12 @@ document.querySelectorAll('.js-add-to-cart')
             //We use data attribute, it allows us to attach any information to an element
             //     e.g : data-product-name
             const productId = button.dataset.productId;
+            addToCart(productId);
 
-            let matchingItem;
-            // loop through the cart list using .forEach()
-            cart.forEach((item) => {
-                if (productId === item.productId) {
-                    matchingItem = item;
-                }
-            });
-            if (matchingItem) {
-                matchingItem.quantity++;
-            } else {
-                cart.push({
-                    productId: productId,
-                    quantity: 1
-                });
-            }
+
             let cartQuantity = 0;
-            cart.forEach((item) =>{
-                cartQuantity +=item.quantity;
+            cart.forEach((item) => {
+                cartQuantity += item.quantity;
             });
             document.querySelector('.js-cart-quantity')
                 .innerHTML = cartQuantity
