@@ -12,7 +12,7 @@
 
 export const cart = [];
 
-function addToCart(productId) {
+export function addToCart(productId) {
     let matchingItem;
     // loop through the cart list using .forEach()
     cart.forEach((cartItem) => {
