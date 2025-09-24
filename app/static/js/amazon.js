@@ -40,6 +40,9 @@
 //Next we generate the HTML using js as below
 //Here we will loop through the above array of products created
 
+//importing the cart variable cart
+import {cart} from '../../../data/cart.js';
+
 // The way this function forEach work, is that it takes each product, saves it in the parameter product and then runs the function.
 let productsHTML = ''
 
