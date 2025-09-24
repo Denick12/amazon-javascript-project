@@ -43,6 +43,8 @@
 //importing the cart variable cart
 import {cart} from '../../../data/cart.js';
 
+// importing the product variable
+import {products} from "../../../data/products";
 // The way this function forEach work, is that it takes each product, saves it in the parameter product and then runs the function.
 let productsHTML = ''
 
