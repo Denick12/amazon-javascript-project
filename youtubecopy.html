@@ -22,21 +22,38 @@
             height: 25px;
         }
 
+        /* --- Search bar (rounded single style) --- */
+        .search-wrapper {
+            position: relative;
+            flex: 1;
+        }
+
         .search-bar {
             width: 100%;
-            border-radius: 20px 0 0 20px;
+            border-radius: 50px;
             border: 1px solid #ccc;
-            padding: 6px 12px;
+            padding: 8px 40px 8px 16px;
             outline: none;
+            background-color: #fff;
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.2s;
         }
 
-
-        .search-btn {
-            border-radius: 0 20px 20px 0;
-            border: 1px solid #ccc;
-            border-left: none;
-            background-color: #f8f8f8;
+        .search-bar:focus {
+            border-color: #999;
         }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
 
         .mic-btn {
             border: none;
@@ -165,8 +182,10 @@
     </div>
 
     <div class="mx-auto d-flex align-items-center" style="max-width: 600px; width: 100%;">
-        <input type="text" class="search-bar" placeholder="Search">
-        <button class="search-btn px-3"><i class="bi bi-search"></i></button>
+        <div class="search-wrapper d-flex align-items-center w-100">
+            <input type="text" class="search-bar" placeholder="Search">
+            <i class="bi bi-search search-icon"></i>
+        </div>
         <button class="mic-btn"><i class="bi bi-mic fs-5"></i></button>
     </div>
 
